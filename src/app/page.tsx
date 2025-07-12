@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import './page.css';
 import styles from './page.module.css';
-
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -29,19 +29,19 @@ export default function Home() {
               <ul className={styles.menu__list}>
                 <li className={styles.menu__item}>
                   {/*TODO: a -> Link*/}
-                  <a href="#" className={styles.menu__link}>
+                  <Link href="#" className={styles.menu__link}>
                     Главное
-                  </a>
+                  </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <a href="#" className={styles.menu__link}>
+                  <Link href="#" className={styles.menu__link}>
                     Мой плейлист
-                  </a>
+                  </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <a href="../signin.html" className={styles.menu__link}>
+                  <Link href="../signin.html" className={styles.menu__link}>
                     Войти
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -67,10 +67,36 @@ export default function Home() {
             </div>
             <div className={styles.centerblock__content}>
               <div className={styles.content__title}>
-                <div className={classnames(styles.playlistTitle__col, styles.col01)}>Трек</div>
-                <div className={classnames(styles.playlistTitle__col, styles.col02)}>Исполнитель</div>
-                <div className={classnames(styles.playlistTitle__col, styles.col03)}>Альбом</div>
-                <div className={classnames(styles.playlistTitle__col, styles.col04)}>
+                <div
+                  className={classnames(
+                    styles.playlistTitle__col,
+                    styles.col01,
+                  )}
+                >
+                  Трек
+                </div>
+                <div
+                  className={classnames(
+                    styles.playlistTitle__col,
+                    styles.col02,
+                  )}
+                >
+                  Исполнитель
+                </div>
+                <div
+                  className={classnames(
+                    styles.playlistTitle__col,
+                    styles.col03,
+                  )}
+                >
+                  Альбом
+                </div>
+                <div
+                  className={classnames(
+                    styles.playlistTitle__col,
+                    styles.col04,
+                  )}
+                >
                   <svg className={styles.playlistTitle__svg}>
                     <use xlinkHref="/img/icon/sprite.svg#icon-watch"></use>
                   </svg>
@@ -86,20 +112,21 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className={styles.track__titleText}>
-                        <a className={styles.track__titleLink} href="">
-                          Guilt <span className={styles.track__titleSpan}></span>
-                        </a>
+                        <Link className={styles.track__titleLink} href="">
+                          Guilt{' '}
+                          <span className={styles.track__titleSpan}></span>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.track__author}>
-                      <a className={styles.track__authorLink} href="">
+                      <Link className={styles.track__authorLink} href="">
                         Nero
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__album}>
-                      <a className={styles.track__albumLink} href="">
+                      <Link className={styles.track__albumLink} href="">
                         Welcome Reality
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__time}>
                       <svg className={styles.track__timeSvg}>
@@ -119,20 +146,21 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className={styles.track__titleText}>
-                        <a className={styles.track__titleLink} href="">
-                          Elektro <span className={styles.track__titleSpan}></span>
-                        </a>
+                        <Link className={styles.track__titleLink} href="">
+                          Elektro{' '}
+                          <span className={styles.track__titleSpan}></span>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.track__author}>
-                      <a className={styles.track__authorLink} href="">
+                      <Link className={styles.track__authorLink} href="">
                         Dynoro, Outwork, Mr. Gee
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__album}>
-                      <a className={styles.track__albumLink} href="">
+                      <Link className={styles.track__albumLink} href="">
                         Elektro
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__time}>
                       <svg className={styles.track__timeSvg}>
@@ -152,20 +180,21 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className={styles.track__titleText}>
-                        <a className={styles.track__titleLink} href="">
-                          I’m Fire <span className={styles.track__titleSpan}></span>
-                        </a>
+                        <Link className={styles.track__titleLink} href="">
+                          I’m Fire{' '}
+                          <span className={styles.track__titleSpan}></span>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.track__author}>
-                      <a className={styles.track__authorLink} href="">
+                      <Link className={styles.track__authorLink} href="">
                         Ali Bakgor
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__album}>
-                      <a className={styles.track__albumLink} href="">
+                      <Link className={styles.track__albumLink} href="">
                         I’m Fire
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__time}>
                       <svg className={styles.track__timeSvg}>
@@ -185,21 +214,23 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className={styles.track__titleText}>
-                        <a className={styles.track__titleLink} href="">
+                        <Link className={styles.track__titleLink} href="">
                           Non Stop
-                          <span className={styles.track__titleSpan}>(Remix)</span>
-                        </a>
+                          <span className={styles.track__titleSpan}>
+                            (Remix)
+                          </span>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.track__author}>
-                      <a className={styles.track__authorLink} href="">
+                      <Link className={styles.track__authorLink} href="">
                         Стоункат, Psychopath
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__album}>
-                      <a className={styles.track__albumLink} href="">
+                      <Link className={styles.track__albumLink} href="">
                         Non Stop
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__time}>
                       <svg className={styles.track__timeSvg}>
@@ -219,23 +250,23 @@ export default function Home() {
                         </svg>
                       </div>
                       <div>
-                        <a className={styles.track__titleLink} href="">
+                        <Link className={styles.track__titleLink} href="">
                           Run Run
                           <span className={styles.track__titleSpan}>
                             (feat. AR/CO)
                           </span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.track__author}>
-                      <a className={styles.track__authorLink} href="">
+                      <Link className={styles.track__authorLink} href="">
                         Jaded, Will Clarke, AR/CO
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__album}>
-                      <a className={styles.track__albumLink} href="">
+                      <Link className={styles.track__albumLink} href="">
                         Run Run
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.track__time}>
                       <svg className={styles.track__timeSvg}>
@@ -260,7 +291,7 @@ export default function Home() {
             <div className={styles.sidebar__block}>
               <div className={styles.sidebar__list}>
                 <div className={styles.sidebar__item}>
-                  <a className={styles.sidebar__link} href="#">
+                  <Link className={styles.sidebar__link} href="#">
                     <img
                       className={styles.sidebar__img}
                       src="/img/playlist01.png"
@@ -268,10 +299,10 @@ export default function Home() {
                       width={250}
                       height={170}
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className={styles.sidebar__item}>
-                  <a className={styles.sidebar__link} href="#">
+                  <Link className={styles.sidebar__link} href="#">
                     <img
                       className={styles.sidebar__img}
                       src="/img/playlist02.png"
@@ -279,10 +310,10 @@ export default function Home() {
                       width={250}
                       height={170}
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className={styles.sidebar__item}>
-                  <a className={styles.sidebar__link} href="#">
+                  <Link className={styles.sidebar__link} href="#">
                     <img
                       className={styles.sidebar__img}
                       src="/img/playlist03.png"
@@ -290,7 +321,7 @@ export default function Home() {
                       width={250}
                       height={170}
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -337,24 +368,34 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className={styles.trackPlay__author}>
-                      <a className={styles.trackPlay__authorLink} href="">
+                      <Link className={styles.trackPlay__authorLink} href="">
                         Ты та...
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.trackPlay__album}>
-                      <a className={styles.trackPlay__albumLink} href="">
+                      <Link className={styles.trackPlay__albumLink} href="">
                         Баста
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
                   <div className={styles.trackPlay__dislike}>
-                    <div className={classnames(styles.player__btnShuffle, styles.btnIcon)}>
+                    <div
+                      className={classnames(
+                        styles.player__btnShuffle,
+                        styles.btnIcon,
+                      )}
+                    >
                       <svg className={styles.trackPlay__likeSvg}>
                         <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                       </svg>
                     </div>
-                    <div className={classnames(styles.trackPlay__dislike, styles.btnIcon)}>
+                    <div
+                      className={classnames(
+                        styles.trackPlay__dislike,
+                        styles.btnIcon,
+                      )}
+                    >
                       <svg className={styles.trackPlay__dislikeSvg}>
                         <use xlinkHref="/img/icon/sprite.svg#icon-dislike"></use>
                       </svg>
